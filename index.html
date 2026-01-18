@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vedant Shukla | Tech Architect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="top-bar">
+  <span id="clock"></span>
+  <button onclick="toggleTheme()">🌙 / ☀️</button>
+</div>
+
+<header>
+  <div class="profile-section">
+    <img id="profileImg" alt="Profile Photo">
+    <input type="file" accept="image/*" onchange="loadProfile(event)">
+  </div>
+
+  <h1>Vedant Shukla</h1>
+  <p>B.Tech CSE Student | Web Developer | eSports Leader</p>
+
+  <div class="resume-upload">
+    <label>📄 Upload Resume (PDF)</label>
+    <input type="file" accept="application/pdf">
+  </div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#projects">Projects</a>
+  <a href="#languages">Languages</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="card">
+<h2>About Me</h2>
+<p>
+Computer Science Engineering student from Bengaluru with strong interests in
+Web Development, Data Analytics, AI, Cybersecurity, and Competitive eSports.
+</p>
+</section>
+
+<section id="experience" class="card">
+<h2>Experience</h2>
+
+<h3>Founder & IGL – GOAT ESPORTS ORGANISATION</h3>
+<p><b>Apr 2019 – Present | India</b></p>
+<ul>
+<li>Founder and In-Game Leader managing 5 active competitive rosters</li>
+<li>Games: Free Fire Max, BGMI, Indus, Pokémon Unite, FIFA</li>
+<li>Participated in Tier 1, Tier 2 & Tier 3 tournaments</li>
+<li>Team strategy, mentoring, scouting, performance management</li>
+<li>Built Goat eSports as a national-level talent platform</li>
+</ul>
+
+<h3>YouTuber & Content Creator – Java 007</h3>
+<p><b>Apr 2024 – Jan 2026</b></p>
+<ul>
+<li>Founder & creator of gaming + infotainment content</li>
+<li>Scripting, editing, thumbnails, SEO</li>
+<li>Built an engaged online community</li>
+</ul>
+</section>
+
+<section id="education" class="card">
+<h2>Education</h2>
+
+<h3>Dayananda Sagar University</h3>
+<p>B.Tech – Computer Science (2025 – 2029)</p>
+
+<h3>Kendriya Vidyalaya</h3>
+<p>PCM Stream | First Division</p>
+<p>Scout & Guide Troop Leader – KV Kollam</p>
+</section>
+
+<section class="card">
+<h2>Skill Overview</h2>
+<canvas id="radarChart" style="max-width: 400px; max-height: 400px;"></canvas>
+</section>
+
+<section id="certifications" class="card">
+<h2>Licenses & Certifications</h2>
+
+<div class="cert">MathLab-AI – MATHLAB <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Programming in C# – Infosys <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Microsoft Learn – Skills & Badges <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Introduction to Programming using Python – University of Leeds <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Digital Skills: Artificial Intelligence – Accenture <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Deloitte Data Analytics Job Simulation – Forage <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Fundamentals of Digital Marketing – Google <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Introduction to CIP Program – OPSWAT Academy <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Machine Learning for Beginners – Simplilearn <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Python 101 for Data Science – IBM <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">TCS iON Career Edge – Young Professional <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">C++ Essentials – Scaler <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">CS107: C++ Programming – Saylor Academy <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">ESL 001–005 (English Series) – Saylor Academy <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Cybersecurity Awareness – HP LIFE <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Market Research – Reliance Foundation <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">NumPy Programming Mastery – Udemy <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Power of Networking – Infosys Springboard <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Python for Beginners – Scaler <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Fire & Public Safety – Govt. of Kerala <input type="file" accept="image/*" onchange="addCert(this)"></div>
+<div class="cert">Introduction to Cybersecurity – Cisco <input type="file" accept="image/*" onchange="addCert(this)"></div>
+
+</section>
+
+<section id="projects" class="card">
+<h2>Projects & Platforms</h2>
+
+<p><b>GitHub:</b>
+<a href="https://github.com/vedantshuklablr-ai" target="_blank">github.com/vedantshuklablr-ai</a></p>
+
+<p><b>HackerRank:</b>
+<a href="https://www.hackerrank.com/profile/vedantshuklablr" target="_blank">Profile</a></p>
+
+<p><b>LeetCode:</b>
+<a href="https://leetcode.com/u/VEDANTSHUKLA007/" target="_blank">Profile</a></p>
+
+<p><b>Microsoft Learn:</b>
+<a href="https://learn.microsoft.com/en-gb/users/vedantshuklka-6026/" target="_blank">Profile</a></p>
+</section>
+
+<section id="languages" class="card">
+<h2>Languages</h2>
+<ul>
+<li>English – Native</li>
+<li>Hindi – Native</li>
+<li>German – Elementary</li>
+<li>Punjabi – Limited</li>
+</ul>
+</section>
+
+<section id="contact" class="card">
+<h2>Contact</h2>
+<p>📧 <a href="mailto:vedantshuklablr@gmail.com">vedantshuklablr@gmail.com</a></p>
+<p>📍 Bengaluru, India</p>
+<p>🔗 <a href="https://www.linkedin.com/in/vedant-shukla-7735a7313/" target="_blank">LinkedIn</a></p>
+<p>🐙 <a href="https://github.com/vedantshuklablr-ai" target="_blank">GitHub</a></p>
+</section>
+
+<footer>© 2026 Vedant Shukla</footer>
+
+<script>
+// Define your password here
+const ownerPassword = "vedant007"; 
+
+function checkOwnerAccess() {
+  // If already logged in via script.js, don't ask again
+  if (sessionStorage.getItem("isOwner") === "true") return true;
+
+  const password = prompt("Enter owner password to upload:");
+  if (password === ownerPassword) {
+      sessionStorage.setItem("isOwner", "true");
+      document.body.classList.add("admin-enabled");
+      return true;
+  }
+  return false;
+}
+
+function addCert(input) {
+  if (!checkOwnerAccess()) {
+    alert("Access denied. Only the owner can upload certificates.");
+    input.value = "";
+    return;
+  }
+  // This will now call the addCert function in your script.js
+  if (window.addCertLogic) window.addCertLogic(input);
+}
+
+function loadProfile(event) {
+  if (!checkOwnerAccess()) {
+    alert("Access denied. Only the owner can upload profile photo.");
+    event.target.value = "";
+    return;
+  }
+  // This will call the logic in script.js
+  if (window.loadProfileLogic) window.loadProfileLogic(event);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const resInput = document.querySelector('.resume-upload input');
+    if (resInput) {
+        resInput.addEventListener('change', function(event) {
+          if (!checkOwnerAccess()) {
+            alert("Access denied. Only the owner can upload resume.");
+            event.target.value = "";
+          }
+        });
+    }
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

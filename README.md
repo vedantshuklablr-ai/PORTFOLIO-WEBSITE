@@ -27,4 +27,15 @@ This website is designed to highlight my work in web development and technology.
 ---
 
 ## 📂 Project Structure
+PORTFOLIO-WEBSITE/
+│
+├── assets/
+│   ├── images/      # Profile & project images
+│   └── icons/       # Icons and logos
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+
 

@@ -2,6 +2,10 @@
 
 A modern, professional portfolio website built with Next.js 16, TypeScript, and Tailwind CSS. Features dark/light theme, 3D animations, and fully responsive design showcasing my technical skills, experience, and achievements.
 
+## 🌐 **Live Demo**
+
+**👉 View Live Portfolio:** [https://personal-portfolio-website-chi-lac.vercel.app/](https://personal-portfolio-website-chi-lac.vercel.app/)
+
 ## ✨ Features
 
 ### 🎨 **Design & UX**
@@ -122,6 +126,9 @@ Edit `src/app/globals.css` to customize theme variables:
 - **Certifications**: Update `certifications-section.tsx`
 
 ## 🚀 Deployment
+
+### 🌐 **Live Portfolio**
+**View the deployed portfolio:** [https://personal-portfolio-website-chi-lac.vercel.app/](https://personal-portfolio-website-chi-lac.vercel.app/)
 
 ### Vercel (Recommended)
 1. Push your code to GitHub

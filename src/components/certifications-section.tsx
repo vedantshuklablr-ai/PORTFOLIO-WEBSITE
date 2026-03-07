@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Award, ExternalLink, Calendar, CheckCircle, Building } from 'lucide-react';
+import { Award, ExternalLink, Calendar, CheckCircle, Building, Github, Trophy, Code } from 'lucide-react';
 import { TiltCard } from '@/components/ui/tilt-card';
 
 const certifications = [
@@ -263,6 +263,57 @@ export function CertificationsSection() {
                 );
               })}
             </div>
+          </div>
+        </motion.div>
+
+        {/* Quick Links */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
+          <h3 className="text-xl font-semibold text-foreground mb-6">
+            Connect on Learning Platforms
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="https://learn.microsoft.com/en-gb/users/vedantshukla-6026/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 hover:scale-105 font-medium"
+            >
+              <Award className="w-5 h-5" />
+              Microsoft Learn
+            </a>
+            <a
+              href="https://github.com/vedantshuklablr-ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-all duration-300 hover:scale-105 font-medium"
+            >
+              <Github className="w-5 h-5" />
+              GitHub
+            </a>
+            <a
+              href="https://www.hackerrank.com/profile/vedantshuklablr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-300 hover:scale-105 font-medium"
+            >
+              <Trophy className="w-5 h-5" />
+              HackerRank
+            </a>
+            <a
+              href="https://leetcode.com/u/VEDANTSHUKLA007/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-all duration-300 hover:scale-105 font-medium"
+            >
+              <Code className="w-5 h-5" />
+              LeetCode
+            </a>
           </div>
         </motion.div>
       </div>

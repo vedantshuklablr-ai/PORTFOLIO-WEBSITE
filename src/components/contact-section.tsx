@@ -42,6 +42,12 @@ const socialLinks = [
     color: 'hover:text-gray-600 bg-gray-50 border-gray-200'
   },
   {
+    name: 'Microsoft Learn',
+    href: 'https://learn.microsoft.com/en-gb/users/vedantshukla-6026/',
+    icon: ExternalLink,
+    color: 'hover:text-blue-700 bg-blue-50 border-blue-200'
+  },
+  {
     name: 'LeetCode',
     href: 'https://leetcode.com/u/VEDANTSHUKLA007/',
     icon: ExternalLink,

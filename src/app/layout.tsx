@@ -15,19 +15,19 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Vedant Shukla - Personal Portfolio",
-  description: "B.Tech CSE Student | Founder & IGL @ GOAT ESPORTS ORGANISATION | C, Python, C# | Certified Learner",
-  keywords: ["Vedant Shukla", "Portfolio", "B.Tech CSE", "GOAT ESPORTS", "Software Developer", "Python", "C#", "Machine Learning"],
+  description: "20-year-old tech enthusiast from Lucknow, passionate about building innovative solutions, participating in hackathons, and exploring new technologies in C, Python, C#, Machine Learning, and Cybersecurity",
+  keywords: ["Vedant Shukla", "Portfolio", "B.Tech CSE", "Tech Enthusiast", "Hackathon", "Python", "C#", "Machine Learning", "Cybersecurity", "Lucknow"],
   authors: [{ name: "Vedant Shukla" }],
   openGraph: {
     title: "Vedant Shukla - Personal Portfolio",
-    description: "B.Tech CSE Student | Founder & IGL @ GOAT ESPORTS ORGANISATION | C, Python, C# | Certified Learner",
+    description: "20-year-old tech enthusiast from Lucknow, passionate about building innovative solutions and exploring new technologies",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Vedant Shukla - Personal Portfolio",
-    description: "B.Tech CSE Student | Founder & IGL @ GOAT ESPORTS ORGANISATION",
+    description: "Tech enthusiast passionate about building innovative solutions and participating in hackathons",
   },
 };
 

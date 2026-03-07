@@ -72,15 +72,14 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
             className="mb-8"
           >
             <h2 className="text-xl sm:text-2xl lg:text-3xl text-muted font-medium leading-relaxed">
-              B.Tech CSE Student | Founder & IGL @{' '}
-              <span className="text-accent font-semibold">GOAT ESPORTS ORGANISATION</span>
+              B.Tech CSE Student | Tech Enthusiast | Hackathon Participant
             </h2>
             <p className="text-lg sm:text-xl text-muted mt-2">
-              C, Python, C# | Certified Learner
+              C, Python, C# | Machine Learning | Cybersecurity
             </p>
           </motion.div>
 
@@ -92,7 +91,7 @@ export function HeroSection() {
             className="flex items-center justify-center text-muted mb-8"
           >
             <MapPin className="w-4 h-4 mr-2" />
-            <span>Bengaluru, Karnataka, India</span>
+            <span>Lucknow, Uttar Pradesh, India</span>
           </motion.div>
 
           {/* Social Links */}

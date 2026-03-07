@@ -6,112 +6,229 @@ import { TiltCard } from '@/components/ui/tilt-card';
 
 const certifications = [
   {
-    title: 'Python for Data Science',
-    issuer: 'IBM',
-    issueDate: '2024',
-    credentialId: 'IBMPY1012024',
-    skills: ['Python', 'Data Science', 'Programming'],
-    verificationLink: 'https://www.credly.com/badges/example',
-    icon: '🐍'
+    title: 'Microsoft Learn – Skills & Badges',
+    issuer: 'Microsoft',
+    issueDate: 'Jul 2025',
+    credentialId: 'Microsoft Learn Profile',
+    skills: ['Microsoft Technologies', 'Cloud Computing', 'Azure'],
+    verificationLink: 'https://learn.microsoft.com/en-gb/users/vedantshukla-6026/',
+    icon: '🏢'
   },
   {
-    title: 'C# Programming',
-    issuer: 'Infosys Springboard',
-    issueDate: '2024',
-    credentialId: 'INFCS2024',
-    skills: ['C#', 'Programming', '.NET'],
-    verificationLink: 'https://infyspringboard.com/certificates/example',
+    title: 'Programming in C# Certification',
+    issuer: 'Infosys',
+    issueDate: 'Dec 2025',
+    credentialId: '1-8a292201-7c47-4fba-81cb-5983a55b7cec',
+    skills: ['C#', 'Programming', '.NET Framework'],
+    verificationLink: '#',
     icon: '🔷'
   },
   {
-    title: 'Machine Learning Fundamentals',
-    issuer: 'Simplilearn',
-    issueDate: '2024',
-    credentialId: 'SML2024',
-    skills: ['Machine Learning', 'AI', 'Data Analysis'],
-    verificationLink: 'https://www.simplilearn.com/verify-certificate/example',
-    icon: '🤖'
+    title: 'MATHLAB Certification',
+    issuer: 'MathLab-AI',
+    issueDate: 'Dec 2025',
+    credentialId: 'VEDANT SHUKLA MATLAB',
+    skills: ['MATLAB', 'Mathematical Computing', 'Data Analysis'],
+    verificationLink: '#',
+    icon: '�'
   },
   {
-    title: 'NumPy for Data Analysis',
-    issuer: 'Udemy',
-    issueDate: '2024',
-    credentialId: 'UDNP2024',
-    skills: ['NumPy', 'Data Analysis', 'Python'],
-    verificationLink: 'https://www.udemy.com/certificate/example',
-    icon: '📊'
+    title: 'TCS iON Career Edge - Young Professional',
+    issuer: 'TCS iON',
+    issueDate: 'Jun 2025',
+    credentialId: '240640-28489282-1016',
+    skills: ['Interpersonal Leadership', 'Interpersonal Communication', 'Soft Skills', 'Corporate Finance', 'Interviewing', 'Email Marketing'],
+    verificationLink: '#',
+    icon: '🏢'
   },
   {
-    title: 'Cybersecurity Essentials',
-    issuer: 'Cisco',
-    issueDate: '2024',
-    credentialId: 'CISCOSEC2024',
-    skills: ['Cybersecurity', 'Network Security', 'IT Security'],
-    verificationLink: 'https://www.credly.com/badges/example',
-    icon: '🛡️'
-  },
-  {
-    title: 'AI and Machine Learning',
-    issuer: 'Accenture',
-    issueDate: '2024',
-    credentialId: 'ACCAML2024',
-    skills: ['AI', 'Machine Learning', 'Digital Transformation'],
-    verificationLink: 'https://www.accenture.com/certificates/example',
-    icon: '🧠'
-  },
-  {
-    title: 'Python Programming',
-    issuer: 'Scaler',
-    issueDate: '2024',
-    credentialId: 'SCPY2024',
-    skills: ['Python', 'Programming', 'Algorithms'],
-    verificationLink: 'https://www.scaler.com/certificates/example',
-    icon: '🐍'
-  },
-  {
-    title: 'C++ Programming',
-    issuer: 'Scaler',
-    issueDate: '2024',
-    credentialId: 'SCCPP2024',
-    skills: ['C++', 'Programming', 'DSA'],
-    verificationLink: 'https://www.scaler.com/certificates/example',
-    icon: '⚡'
-  },
-  {
-    title: 'Cybersecurity Awareness',
-    issuer: 'HP LIFE',
-    issueDate: '2024',
-    credentialId: 'HPCSA2024',
-    skills: ['Cybersecurity', 'Digital Safety', 'Security Awareness'],
-    verificationLink: 'https://www.life-global.org/certificates/example',
-    icon: '🔒'
-  },
-  {
-    title: 'Digital Marketing',
-    issuer: 'Google',
-    issueDate: '2024',
-    credentialId: 'GOOGDM2024',
-    skills: ['Digital Marketing', 'SEO', 'Online Advertising'],
-    verificationLink: 'https://learndigital.withgoogle.com/certificates/example',
-    icon: '📱'
-  },
-  {
-    title: 'Critical Infrastructure Protection',
-    issuer: 'OPSWAT',
-    issueDate: '2024',
-    credentialId: 'OPSCIP2024',
-    skills: ['Critical Infrastructure', 'Security', 'Compliance'],
-    verificationLink: 'https://www.opswat.com/certificates/example',
+    title: 'Department of Factories and Boilers',
+    issuer: 'Government of Kerala',
+    issueDate: 'Sep 2019',
+    credentialId: 'Safety Certification',
+    skills: ['Fire Safety', 'Public Safety', 'Industrial Safety', 'Safety Management Systems'],
+    verificationLink: '#',
     icon: '🏛️'
   },
   {
-    title: 'Deloitte Virtual Internship',
-    issuer: 'Deloitte Forage',
-    issueDate: '2024',
-    credentialId: 'DELF2024',
-    skills: ['Professional Skills', 'Business Analysis', 'Consulting'],
-    verificationLink: 'https://www.theforage.com/certificates/example',
+    title: 'NumPy Programming Mastery: Learn Python for Data Analysis',
+    issuer: 'Udemy',
+    issueDate: 'Apr 2025',
+    credentialId: 'UC-d9db8be7-cc3d-40a3-9bef-6fb5acf0981a',
+    skills: ['Data Analysis', 'Python', 'NumPy'],
+    verificationLink: '#',
+    icon: '�'
+  },
+  {
+    title: 'Introduction to Cybersecurity',
+    issuer: 'Cisco',
+    issueDate: 'Apr 2025',
+    credentialId: 'Cisco Certification',
+    skills: ['Cybersecurity', 'Network Security', 'Security Fundamentals'],
+    verificationLink: '#',
+    icon: '🛡️'
+  },
+  {
+    title: 'Machine learning for Beginners',
+    issuer: 'Simplilearn',
+    issueDate: 'Jun 2025',
+    credentialId: '8479226',
+    skills: ['Machine Learning', 'AI', 'Data Science'],
+    verificationLink: '#',
+    icon: '🤖'
+  },
+  {
+    title: 'Python 101 for Data Science',
+    issuer: 'IBM',
+    issueDate: 'Jun 2025',
+    credentialId: 'a94565369a9c47d1a57d26118428179e',
+    skills: ['Data Science', 'Python', 'Programming'],
+    verificationLink: '#',
+    icon: '🐍'
+  },
+  {
+    title: 'Deloitte Australia - Data Analytics Job Simulation',
+    issuer: 'Forage',
+    issueDate: 'Jun 2025',
+    credentialId: 'NTyQycLSiQ2yqfxPX',
+    skills: ['Data Analytics', 'Forensic Technology'],
+    verificationLink: '#',
     icon: '💼'
+  },
+  {
+    title: 'AN INTRODUCTION TO PROGRAMMING USING PYTHON',
+    issuer: 'University of Leeds',
+    issueDate: 'Jun 2025',
+    credentialId: 'futurelearn.com/certificates/s4uo1s2',
+    skills: ['Python', 'Programming'],
+    verificationLink: '#',
+    icon: '🎓'
+  },
+  {
+    title: 'DIGITAL SKILLS: ARTIFICIAL INTELLIGENCE',
+    issuer: 'Accenture',
+    issueDate: 'Jun 2025',
+    credentialId: 'futurelearn.com/certificates/f8dx37g',
+    skills: ['Artificial Intelligence', 'Digital Skills', 'AI'],
+    verificationLink: '#',
+    icon: '🧠'
+  },
+  {
+    title: 'Introduction to CIP Program',
+    issuer: 'OPSWAT Academy',
+    issueDate: 'Jun 2025',
+    credentialId: '7z2kZON0Fw',
+    skills: ['Critical Infrastructure Protection', 'Security'],
+    verificationLink: '#',
+    icon: '🔒'
+  },
+  {
+    title: 'Python Course for Beginners with Certification: Mastering the Essentials',
+    issuer: 'Scaler School of Technology',
+    issueDate: 'Apr 2025',
+    credentialId: 'Scaler Python',
+    skills: ['Python', 'Programming'],
+    verificationLink: '#',
+    icon: '🐍'
+  },
+  {
+    title: 'C++ Course: Learn the Essentials',
+    issuer: 'Scaler School of Technology',
+    issueDate: 'Apr 2025',
+    credentialId: 'Scaler C++',
+    skills: ['C++', 'Programming'],
+    verificationLink: '#',
+    icon: '⚡'
+  },
+  {
+    title: 'Introduction to Cybersecurity Awareness',
+    issuer: 'HP LIFE',
+    issueDate: 'Apr 2025',
+    credentialId: 'fefcaea1-8442-4f8d-af68-63eebaa6a60e',
+    skills: ['Cybersecurity', 'Security Awareness'],
+    verificationLink: '#',
+    icon: '🔒'
+  },
+  {
+    title: 'Power of Networking',
+    issuer: 'Infosys Springboard',
+    issueDate: 'Apr 2025',
+    credentialId: 'Infosys Springboard',
+    skills: ['Networking', 'Professional Skills'],
+    verificationLink: '#',
+    icon: '🌐'
+  },
+  {
+    title: 'Market Research',
+    issuer: 'Reliance Foundation',
+    issueDate: 'Apr 2025',
+    credentialId: 'Reliance Foundation',
+    skills: ['Stock Picking', 'Stock Market Analysis', 'Market Research'],
+    verificationLink: '#',
+    icon: '📈'
+  },
+  {
+    title: 'CS107: C++ Programming',
+    issuer: 'Saylor Academy',
+    issueDate: 'Apr 2025',
+    credentialId: '3578926882VS',
+    skills: ['C++', 'Programming'],
+    verificationLink: '#',
+    icon: '⚡'
+  },
+  {
+    title: 'ESL005: Business-Proficient English as a Second Language',
+    issuer: 'Saylor Academy',
+    issueDate: 'Apr 2025',
+    credentialId: '9639918024VS',
+    skills: ['English as a Second Language', 'Business English'],
+    verificationLink: '#',
+    icon: '�️'
+  },
+  {
+    title: 'ESL004: Advanced English as a Second Language',
+    issuer: 'Saylor Academy',
+    issueDate: 'Apr 2025',
+    credentialId: '3408972980VS',
+    skills: ['English as a Second Language', 'Advanced English'],
+    verificationLink: '#',
+    icon: '🗣️'
+  },
+  {
+    title: 'ESL003: Upper-Intermediate English as a Second Language',
+    issuer: 'Saylor Academy',
+    issueDate: 'Apr 2025',
+    credentialId: '6005124287VS',
+    skills: ['English as a Second Language', 'Upper-Intermediate English'],
+    verificationLink: '#',
+    icon: '🗣️'
+  },
+  {
+    title: 'ESL002: Intermediate English as a Second Language',
+    issuer: 'Saylor Academy',
+    issueDate: 'Apr 2025',
+    credentialId: '3363881600VS',
+    skills: ['English as a Second Language', 'Intermediate English'],
+    verificationLink: '#',
+    icon: '🗣️'
+  },
+  {
+    title: 'ESL001: Elementary English as a Second Language',
+    issuer: 'Saylor Academy',
+    issueDate: 'Apr 2025',
+    credentialId: '1742372403VS',
+    skills: ['English as a Second Language', 'Elementary English'],
+    verificationLink: '#',
+    icon: '🗣️'
+  },
+  {
+    title: 'Fundamentals of digital marketing',
+    issuer: 'Google',
+    issueDate: 'Jun 2025',
+    credentialId: '379077430',
+    skills: ['Digital Marketing'],
+    verificationLink: '#',
+    icon: '�'
   }
 ];
 

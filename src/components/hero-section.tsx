@@ -97,7 +97,7 @@ export function HeroSection() {
             className="flex items-center justify-center text-muted mb-8"
           >
             <MapPin className="w-4 h-4 mr-2" />
-            <span>Lucknow, Uttar Pradesh, India</span>
+            <span>Lucknow, Uttar Pradesh • Currently in Bangalore</span>
           </motion.div>
 
           {/* Social Links */}

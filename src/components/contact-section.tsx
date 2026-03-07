@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Lucknow, Uttar Pradesh, India',
+    value: 'Lucknow, Uttar Pradesh • Currently in Bangalore',
     href: '#',
     color: 'text-red-600'
   }

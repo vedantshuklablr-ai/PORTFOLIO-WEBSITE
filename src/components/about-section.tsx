@@ -32,7 +32,7 @@ export function AboutSection() {
                 Professional Summary
               </h3>
               <p className="text-muted leading-relaxed">
-                I am a 20-year-old tech enthusiast from Lucknow, Uttar Pradesh, with a passion for exploring new ideas and building innovative solutions. I thrive on participating in hackathons, ideathons, summits, seminars, and workshops where I can learn, collaborate, and challenge myself continuously.
+                I am a 20-year-old tech enthusiast from Lucknow, Uttar Pradesh, currently living in Bangalore. I am passionate about exploring new ideas and actively participating in hackathons, ideathons, summits, seminars, and workshops.
               </p>
             </div>
 
@@ -58,7 +58,7 @@ export function AboutSection() {
                 Innovation & Collaboration
               </h3>
               <p className="text-muted leading-relaxed">
-                I love to explore new technologies, think creatively, and work with teams to turn ideas into real projects. My goal is to continuously learn, improve my skills, and contribute to meaningful tech solutions that make a positive impact.
+                I enjoy learning new technologies, building projects, thinking creatively, and collaborating with teams to turn ideas into real solutions. I believe in continuously learning, exploring, and growing through hands-on experiences.
               </p>
             </div>
 

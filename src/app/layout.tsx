@@ -15,19 +15,19 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Vedant Shukla - Personal Portfolio",
-  description: "20-year-old tech enthusiast from Lucknow, passionate about building innovative solutions, participating in hackathons, and exploring new technologies in C, Python, C#, Machine Learning, and Cybersecurity",
-  keywords: ["Vedant Shukla", "Portfolio", "B.Tech CSE", "Tech Enthusiast", "Hackathon", "Python", "C#", "Machine Learning", "Cybersecurity", "Lucknow"],
+  description: "20-year-old tech enthusiast from Lucknow, currently based in Bangalore. Passionate about hackathons, ideathons, workshops, and building innovative projects while learning and collaborating with teams in C, Python, C#, Machine Learning, and Cybersecurity",
+  keywords: ["Vedant Shukla", "Portfolio", "B.Tech CSE", "Tech Enthusiast", "Hackathon", "Bangalore", "Lucknow", "Python", "C#", "Machine Learning", "Cybersecurity"],
   authors: [{ name: "Vedant Shukla" }],
   openGraph: {
     title: "Vedant Shukla - Personal Portfolio",
-    description: "20-year-old tech enthusiast from Lucknow, passionate about building innovative solutions and exploring new technologies",
+    description: "20-year-old tech enthusiast from Lucknow, currently based in Bangalore. Passionate about hackathons and building innovative projects",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Vedant Shukla - Personal Portfolio",
-    description: "Tech enthusiast passionate about building innovative solutions and participating in hackathons",
+    description: "Tech enthusiast from Lucknow, currently in Bangalore, passionate about hackathons and innovation",
   },
 };
 

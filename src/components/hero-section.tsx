@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, ExternalLink, MapPin } from 'lucide-react';
+import { Github, Linkedin, ExternalLink, MapPin, Youtube } from 'lucide-react';
 import { ParallaxBg } from '@/components/ui/parallax-bg';
 
 const socialLinks = [
@@ -16,6 +16,12 @@ const socialLinks = [
     href: 'https://github.com/vedantshuklablr-ai',
     icon: Github,
     color: 'hover:text-gray-600',
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/@Java007',
+    icon: Youtube,
+    color: 'hover:text-red-600',
   },
   {
     name: 'Microsoft Learn',

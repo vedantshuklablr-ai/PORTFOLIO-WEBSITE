@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Code, Brain, Shield, Briefcase, MessageSquare, Zap, Database, Gamepad2 } from 'lucide-react';
+import { FaPython, FaJava, FaGitAlt, FaDocker, FaAws, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaLinux, FaWindows, FaApple } from 'react-icons/fa';
+import { SiCplusplus, SiSharp, SiMongodb, SiPostgresql, SiRedis, SiTensorflow, SiPytorch, SiKubernetes, SiJenkins, SiGooglecloud, SiHeroku, SiVercel, SiNetlify, SiIntellijidea, SiFigma, SiCanva, SiSlack, SiDiscord, SiTrello, SiJira, SiGithub, SiGitlab, SiBitbucket, SiLeetcode, SiHackerrank, SiCodeforces, SiCodepen, SiStackoverflow, SiMedium, SiDevdotto, SiHashnode, SiX, SiInstagram, SiYoutube, SiTiktok } from 'react-icons/si';
 import { TiltCard } from '@/components/ui/tilt-card';
 
 const skillsData = {
@@ -10,12 +12,12 @@ const skillsData = {
     icon: Code,
     color: 'bg-blue-500/10 text-blue-600 border-blue-200',
     skills: [
-      { name: 'C', level: 'Advanced' },
-      { name: 'Python', level: 'Advanced' },
-      { name: 'C++', level: 'Intermediate' },
-      { name: 'C#', level: 'Intermediate' },
-      { name: 'JavaScript', level: 'Intermediate' },
-      { name: 'TypeScript', level: 'Intermediate' }
+      { name: 'C', level: 'Advanced', icon: '⚙️' },
+      { name: 'Python', level: 'Advanced', icon: FaPython },
+      { name: 'C++', level: 'Intermediate', icon: SiCplusplus },
+      { name: 'C#', level: 'Intermediate', icon: SiSharp },
+      { name: 'JavaScript', level: 'Intermediate', icon: FaJs },
+      { name: 'TypeScript', level: 'Intermediate', icon: '📘' }
     ]
   },
   dataAi: {
@@ -23,10 +25,10 @@ const skillsData = {
     icon: Brain,
     color: 'bg-purple-500/10 text-purple-600 border-purple-200',
     skills: [
-      { name: 'Machine Learning', level: 'Intermediate' },
-      { name: 'NumPy', level: 'Intermediate' },
-      { name: 'Data Analysis', level: 'Intermediate' },
-      { name: 'AI/ML Algorithms', level: 'Intermediate' }
+      { name: 'Machine Learning', level: 'Intermediate', icon: SiTensorflow },
+      { name: 'NumPy', level: 'Intermediate', icon: '📊' },
+      { name: 'Data Analysis', level: 'Intermediate', icon: '📈' },
+      { name: 'AI/ML Algorithms', level: 'Intermediate', icon: SiPytorch }
     ]
   },
   security: {
@@ -34,10 +36,10 @@ const skillsData = {
     icon: Shield,
     color: 'bg-red-500/10 text-red-600 border-red-200',
     skills: [
-      { name: 'Network Security', level: 'Intermediate' },
-      { name: 'Security Protocols', level: 'Intermediate' },
-      { name: 'Threat Analysis', level: 'Basic' },
-      { name: 'Security Awareness', level: 'Advanced' }
+      { name: 'Network Security', level: 'Intermediate', icon: '🔐' },
+      { name: 'Security Protocols', level: 'Intermediate', icon: '🛡️' },
+      { name: 'Threat Analysis', level: 'Basic', icon: '🔍' },
+      { name: 'Security Awareness', level: 'Advanced', icon: '🚨' }
     ]
   },
   business: {
@@ -45,10 +47,10 @@ const skillsData = {
     icon: Briefcase,
     color: 'bg-green-500/10 text-green-600 border-green-200',
     skills: [
-      { name: 'Digital Marketing', level: 'Intermediate' },
-      { name: 'Business Development', level: 'Intermediate' },
-      { name: 'Strategic Planning', level: 'Advanced' },
-      { name: 'SEO Optimization', level: 'Intermediate' }
+      { name: 'Digital Marketing', level: 'Intermediate', icon: '📱' },
+      { name: 'Business Development', level: 'Intermediate', icon: '📊' },
+      { name: 'Strategic Planning', level: 'Advanced', icon: '🎯' },
+      { name: 'SEO Optimization', level: 'Intermediate', icon: '🔍' }
     ]
   },
   leadership: {
@@ -56,10 +58,10 @@ const skillsData = {
     icon: MessageSquare,
     color: 'bg-yellow-500/10 text-yellow-600 border-yellow-200',
     skills: [
-      { name: 'Team Leadership', level: 'Advanced' },
-      { name: 'Strategic Management', level: 'Advanced' },
-      { name: 'Talent Scouting', level: 'Intermediate' },
-      { name: 'Performance Management', level: 'Intermediate' }
+      { name: 'Team Leadership', level: 'Advanced', icon: SiSlack },
+      { name: 'Strategic Management', level: 'Advanced', icon: SiTrello },
+      { name: 'Talent Scouting', level: 'Intermediate', icon: '👥' },
+      { name: 'Performance Management', level: 'Intermediate', icon: SiJira }
     ]
   },
   productivity: {
@@ -67,10 +69,10 @@ const skillsData = {
     icon: Zap,
     color: 'bg-indigo-500/10 text-indigo-600 border-indigo-200',
     skills: [
-      { name: 'Git/GitHub', level: 'Intermediate' },
-      { name: 'VS Code', level: 'Advanced' },
-      { name: 'Project Management', level: 'Intermediate' },
-      { name: 'Content Creation', level: 'Advanced' }
+      { name: 'Git/GitHub', level: 'Intermediate', icon: SiGithub },
+      { name: 'VS Code', level: 'Advanced', icon: '💻' },
+      { name: 'Project Management', level: 'Intermediate', icon: '📋' },
+      { name: 'Content Creation', level: 'Advanced', icon: SiCanva }
     ]
   }
 };
@@ -149,14 +151,24 @@ export function SkillsSection() {
                   </h3>
                   
                   <div className="space-y-3">
-                    {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex} className="flex items-center justify-between">
-                        <span className="text-muted">{skill.name}</span>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getLevelColor(skill.level)}`}>
-                          {skill.level}
-                        </span>
-                      </div>
-                    ))}
+                    {category.skills.map((skill, skillIndex) => {
+                      const IconComponent = skill.icon;
+                      return (
+                        <div key={skillIndex} className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            {typeof IconComponent === 'string' ? (
+                              <span className="text-lg">{IconComponent}</span>
+                            ) : (
+                              <IconComponent className="w-4 h-4" />
+                            )}
+                            <span className="text-muted">{skill.name}</span>
+                          </div>
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getLevelColor(skill.level)}`}>
+                            {skill.level}
+                          </span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </motion.div>
               </TiltCard>

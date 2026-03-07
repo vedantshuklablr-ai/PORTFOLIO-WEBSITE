@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Copy, Check } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Copy, Check, Youtube } from 'lucide-react';
 
 const contactInfo = [
   {
@@ -40,6 +40,12 @@ const socialLinks = [
     href: 'https://github.com/vedantshuklablr-ai',
     icon: Github,
     color: 'hover:text-gray-600 bg-gray-50 border-gray-200'
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/@Java007',
+    icon: Youtube,
+    color: 'hover:text-red-600 bg-red-50 border-red-200'
   },
   {
     name: 'Microsoft Learn',

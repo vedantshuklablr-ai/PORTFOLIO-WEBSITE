@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Copy, Check, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Copy, Check } from 'lucide-react';
+import { LogoIcon, logos } from '@/components/ui/logo-icons';
 
 const contactInfo = [
   {
@@ -32,38 +33,32 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/vedant-shukla-7735a7313/',
-    icon: Linkedin,
-    color: 'hover:text-blue-600 bg-blue-50 border-blue-200'
+    logo: logos.linkedin,
+    color: 'hover:bg-blue-50 border-blue-200'
   },
   {
     name: 'GitHub',
     href: 'https://github.com/vedantshuklablr-ai',
-    icon: Github,
-    color: 'hover:text-gray-600 bg-gray-50 border-gray-200'
-  },
-  {
-    name: 'YouTube',
-    href: 'https://www.youtube.com/@Java007',
-    icon: Youtube,
-    color: 'hover:text-red-600 bg-red-50 border-red-200'
+    logo: logos.github,
+    color: 'hover:bg-gray-50 border-gray-200'
   },
   {
     name: 'Microsoft Learn',
     href: 'https://learn.microsoft.com/en-gb/users/vedantshukla-6026/',
-    icon: ExternalLink,
-    color: 'hover:text-blue-700 bg-blue-50 border-blue-200'
+    logo: logos.microsoft,
+    color: 'hover:bg-blue-50 border-blue-200'
   },
   {
     name: 'LeetCode',
     href: 'https://leetcode.com/u/VEDANTSHUKLA007/',
-    icon: ExternalLink,
-    color: 'hover:text-yellow-600 bg-yellow-50 border-yellow-200'
+    logo: logos.leetcode,
+    color: 'hover:bg-yellow-50 border-yellow-200'
   },
   {
     name: 'HackerRank',
     href: 'https://www.hackerrank.com/profile/vedantshuklablr',
-    icon: ExternalLink,
-    color: 'hover:text-green-600 bg-green-50 border-green-200'
+    logo: logos.hackerrank,
+    color: 'hover:bg-green-50 border-green-200'
   }
 ];
 
@@ -180,36 +175,33 @@ export function ContactSection() {
             </h3>
             
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              {socialLinks.map((link, index) => {
-                const IconComponent = link.icon;
-                return (
-                  <motion.a
-                    key={index}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: 0.5 + (index * 0.1) }}
-                    viewport={{ once: true }}
-                    className={`p-6 rounded-xl border ${link.color} hover:shadow-lg transition-all duration-300 hover:scale-105 group`}
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-white/50 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <IconComponent className="w-6 h-6" />
+              {socialLinks.map((link, index) => (
+                <motion.a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: 0.5 + (index * 0.1) }}
+                  viewport={{ once: true }}
+                  className={`p-6 rounded-xl border ${link.color} hover:shadow-lg transition-all duration-300 hover:scale-105 group`}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-white/50 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <LogoIcon src={link.logo} alt={link.name} size={24} />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-foreground group-hover:text-accent transition-colors">
+                        {link.name}
                       </div>
-                      <div>
-                        <div className="font-semibold text-foreground group-hover:text-accent transition-colors">
-                          {link.name}
-                        </div>
-                        <div className="text-sm text-muted">
-                          View Profile
-                        </div>
+                      <div className="text-sm text-muted">
+                        Visit Profile
                       </div>
                     </div>
-                  </motion.a>
-                );
-              })}
+                  </div>
+                </motion.a>
+              ))}
             </div>
 
             {/* Message */}

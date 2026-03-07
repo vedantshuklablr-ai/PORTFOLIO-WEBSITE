@@ -1,45 +1,40 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, ExternalLink, MapPin, Youtube } from 'lucide-react';
+import { Github, Linkedin, ExternalLink, MapPin } from 'lucide-react';
 import { ParallaxBg } from '@/components/ui/parallax-bg';
+import { LogoIcon, logos } from '@/components/ui/logo-icons';
 
 const socialLinks = [
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/vedant-shukla-7735a7313/',
-    icon: Linkedin,
-    color: 'hover:text-blue-600',
+    logo: logos.linkedin,
+    color: 'hover:bg-blue-100 border-blue-200',
   },
   {
     name: 'GitHub',
     href: 'https://github.com/vedantshuklablr-ai',
-    icon: Github,
-    color: 'hover:text-gray-600',
-  },
-  {
-    name: 'YouTube',
-    href: 'https://www.youtube.com/@Java007',
-    icon: Youtube,
-    color: 'hover:text-red-600',
+    logo: logos.github,
+    color: 'hover:bg-gray-100 border-gray-200',
   },
   {
     name: 'Microsoft Learn',
     href: 'https://learn.microsoft.com/en-gb/users/vedantshukla-6026/',
-    icon: ExternalLink,
-    color: 'hover:text-blue-700',
+    logo: logos.microsoft,
+    color: 'hover:bg-blue-100 border-blue-200',
   },
   {
     name: 'LeetCode',
     href: 'https://leetcode.com/u/VEDANTSHUKLA007/',
-    icon: ExternalLink,
-    color: 'hover:text-yellow-600',
+    logo: logos.leetcode,
+    color: 'hover:bg-yellow-100 border-yellow-200',
   },
   {
     name: 'HackerRank',
     href: 'https://www.hackerrank.com/profile/vedantshuklablr',
-    icon: ExternalLink,
-    color: 'hover:text-green-600',
+    logo: logos.hackerrank,
+    color: 'hover:bg-green-100 border-green-200',
   },
 ];
 
@@ -107,22 +102,19 @@ export function HeroSection() {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
-            {socialLinks.map((link) => {
-              const IconComponent = link.icon;
-              return (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex items-center gap-2 px-6 py-3 bg-card border border-line rounded-lg hover:bg-accent/10 transition-all duration-300 hover:scale-105 hover:shadow-lg ${link.color}`}
-                  aria-label={`Visit ${link.name} profile`}
-                >
-                  <IconComponent className="w-5 h-5" />
-                  <span className="font-medium">{link.name}</span>
-                </a>
-              );
-            })}
+            {socialLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center gap-2 px-6 py-3 bg-card border border-line rounded-lg hover:bg-accent/10 transition-all duration-300 hover:scale-105 hover:shadow-lg ${link.color}`}
+                aria-label={`Visit ${link.name} profile`}
+              >
+                <LogoIcon src={link.logo} alt={link.name} size={20} />
+                <span className="font-medium">{link.name}</span>
+              </a>
+            ))}
           </motion.div>
 
           {/* CTA Buttons */}

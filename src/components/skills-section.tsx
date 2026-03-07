@@ -5,6 +5,7 @@ import { Code, Brain, Shield, Briefcase, MessageSquare, Zap, Database, Gamepad2 
 import { FaPython, FaJava, FaGitAlt, FaDocker, FaAws, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaLinux, FaWindows, FaApple } from 'react-icons/fa';
 import { SiCplusplus, SiSharp, SiMongodb, SiPostgresql, SiRedis, SiTensorflow, SiPytorch, SiKubernetes, SiJenkins, SiGooglecloud, SiHeroku, SiVercel, SiNetlify, SiIntellijidea, SiFigma, SiCanva, SiSlack, SiDiscord, SiTrello, SiJira, SiGithub, SiGitlab, SiBitbucket, SiLeetcode, SiHackerrank, SiCodeforces, SiCodepen, SiStackoverflow, SiMedium, SiDevdotto, SiHashnode, SiX, SiInstagram, SiYoutube, SiTiktok } from 'react-icons/si';
 import { TiltCard } from '@/components/ui/tilt-card';
+import { LogoIcon, logos } from '@/components/ui/logo-icons';
 
 const skillsData = {
   programming: {
@@ -13,7 +14,7 @@ const skillsData = {
     color: 'bg-blue-500/10 text-blue-600 border-blue-200',
     skills: [
       { name: 'C', level: 'Advanced', icon: '⚙️' },
-      { name: 'Python', level: 'Advanced', icon: FaPython },
+      { name: 'Python', level: 'Advanced', logo: logos.python },
       { name: 'C++', level: 'Intermediate', icon: SiCplusplus },
       { name: 'C#', level: 'Intermediate', icon: SiSharp },
       { name: 'JavaScript', level: 'Intermediate', icon: FaJs },
@@ -25,10 +26,10 @@ const skillsData = {
     icon: Brain,
     color: 'bg-purple-500/10 text-purple-600 border-purple-200',
     skills: [
-      { name: 'Machine Learning', level: 'Intermediate', icon: SiTensorflow },
+      { name: 'Machine Learning', level: 'Intermediate', logo: logos.tensorflow },
       { name: 'NumPy', level: 'Intermediate', icon: '📊' },
       { name: 'Data Analysis', level: 'Intermediate', icon: '📈' },
-      { name: 'AI/ML Algorithms', level: 'Intermediate', icon: SiPytorch }
+      { name: 'AI/ML Algorithms', level: 'Intermediate', logo: logos.tensorflow }
     ]
   },
   security: {
@@ -58,10 +59,10 @@ const skillsData = {
     icon: MessageSquare,
     color: 'bg-yellow-500/10 text-yellow-600 border-yellow-200',
     skills: [
-      { name: 'Team Leadership', level: 'Advanced', icon: SiSlack },
-      { name: 'Strategic Management', level: 'Advanced', icon: SiTrello },
+      { name: 'Team Leadership', level: 'Advanced', logo: logos.slack },
+      { name: 'Strategic Management', level: 'Advanced', logo: logos.trello },
       { name: 'Talent Scouting', level: 'Intermediate', icon: '👥' },
-      { name: 'Performance Management', level: 'Intermediate', icon: SiJira }
+      { name: 'Performance Management', level: 'Intermediate', logo: logos.jira }
     ]
   },
   productivity: {
@@ -69,10 +70,10 @@ const skillsData = {
     icon: Zap,
     color: 'bg-indigo-500/10 text-indigo-600 border-indigo-200',
     skills: [
-      { name: 'Git/GitHub', level: 'Intermediate', icon: SiGithub },
+      { name: 'Git/GitHub', level: 'Intermediate', logo: logos.github },
       { name: 'VS Code', level: 'Advanced', icon: '💻' },
       { name: 'Project Management', level: 'Intermediate', icon: '📋' },
-      { name: 'Content Creation', level: 'Advanced', icon: SiCanva }
+      { name: 'Content Creation', level: 'Advanced', logo: logos.canva }
     ]
   }
 };
@@ -152,22 +153,37 @@ export function SkillsSection() {
                   
                   <div className="space-y-3">
                     {category.skills.map((skill, skillIndex) => {
-                      const IconComponent = skill.icon;
-                      return (
-                        <div key={skillIndex} className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            {typeof IconComponent === 'string' ? (
-                              <span className="text-lg">{IconComponent}</span>
-                            ) : (
-                              <IconComponent className="w-4 h-4" />
-                            )}
-                            <span className="text-muted">{skill.name}</span>
+                      if (skill.logo) {
+                        return (
+                          <div key={skillIndex} className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                              <LogoIcon src={skill.logo} alt={skill.name} size={16} />
+                              <span className="text-muted">{skill.name}</span>
+                            </div>
+                            <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getLevelColor(skill.level)}`}>
+                              {skill.level}
+                            </span>
                           </div>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getLevelColor(skill.level)}`}>
-                            {skill.level}
-                          </span>
-                        </div>
-                      );
+                        );
+                      } else if (skill.icon) {
+                        const IconComponent = skill.icon;
+                        return (
+                          <div key={skillIndex} className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                              {typeof IconComponent === 'string' ? (
+                                <span className="text-lg">{IconComponent}</span>
+                              ) : (
+                                <IconComponent className="w-4 h-4" />
+                              )}
+                              <span className="text-muted">{skill.name}</span>
+                            </div>
+                            <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getLevelColor(skill.level)}`}>
+                              {skill.level}
+                            </span>
+                          </div>
+                        );
+                      }
+                      return null;
                     })}
                   </div>
                 </motion.div>

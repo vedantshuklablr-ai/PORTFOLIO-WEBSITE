@@ -13,12 +13,15 @@ const skillsData = {
     icon: Code,
     color: 'bg-blue-500/10 text-blue-600 border-blue-200',
     skills: [
-      { name: 'C', level: 'Advanced', icon: '⚙️' },
+      { name: 'C', level: 'Advanced', logo: logos.cplusplus },
       { name: 'Python', level: 'Advanced', logo: logos.python },
-      { name: 'C++', level: 'Intermediate', icon: SiCplusplus },
-      { name: 'C#', level: 'Intermediate', icon: SiSharp },
-      { name: 'JavaScript', level: 'Intermediate', icon: FaJs },
-      { name: 'TypeScript', level: 'Intermediate', icon: '📘' }
+      { name: 'C++', level: 'Intermediate', logo: logos.cplusplus },
+      { name: 'C#', level: 'Intermediate', logo: logos.csharp },
+      { name: 'JavaScript', level: 'Intermediate', logo: logos.javascript },
+      { name: 'TypeScript', level: 'Intermediate', logo: logos.typescript },
+      { name: 'Java', level: 'Intermediate', logo: logos.java },
+      { name: 'HTML5', level: 'Advanced', logo: logos.html5 },
+      { name: 'CSS3', level: 'Advanced', logo: logos.css3 }
     ]
   },
   dataAi: {
@@ -27,8 +30,9 @@ const skillsData = {
     color: 'bg-purple-500/10 text-purple-600 border-purple-200',
     skills: [
       { name: 'Machine Learning', level: 'Intermediate', logo: logos.tensorflow },
-      { name: 'NumPy', level: 'Intermediate', icon: '📊' },
-      { name: 'Data Analysis', level: 'Intermediate', icon: '📈' },
+      { name: 'Deep Learning', level: 'Intermediate', logo: logos.pytorch },
+      { name: 'NumPy', level: 'Intermediate', logo: logos.python },
+      { name: 'Data Analysis', level: 'Intermediate', logo: logos.python },
       { name: 'AI/ML Algorithms', level: 'Intermediate', logo: logos.tensorflow }
     ]
   },
@@ -40,7 +44,8 @@ const skillsData = {
       { name: 'Network Security', level: 'Intermediate', icon: '🔐' },
       { name: 'Security Protocols', level: 'Intermediate', icon: '🛡️' },
       { name: 'Threat Analysis', level: 'Basic', icon: '🔍' },
-      { name: 'Security Awareness', level: 'Advanced', icon: '🚨' }
+      { name: 'Security Awareness', level: 'Advanced', icon: '🚨' },
+      { name: 'Penetration Testing', level: 'Intermediate', icon: '💻' }
     ]
   },
   business: {
@@ -51,7 +56,8 @@ const skillsData = {
       { name: 'Digital Marketing', level: 'Intermediate', icon: '📱' },
       { name: 'Business Development', level: 'Intermediate', icon: '📊' },
       { name: 'Strategic Planning', level: 'Advanced', icon: '🎯' },
-      { name: 'SEO Optimization', level: 'Intermediate', icon: '🔍' }
+      { name: 'SEO Optimization', level: 'Intermediate', icon: '🔍' },
+      { name: 'Content Strategy', level: 'Intermediate', icon: '📝' }
     ]
   },
   leadership: {
@@ -62,7 +68,8 @@ const skillsData = {
       { name: 'Team Leadership', level: 'Advanced', logo: logos.slack },
       { name: 'Strategic Management', level: 'Advanced', logo: logos.trello },
       { name: 'Talent Scouting', level: 'Intermediate', icon: '👥' },
-      { name: 'Performance Management', level: 'Intermediate', logo: logos.jira }
+      { name: 'Performance Management', level: 'Intermediate', logo: logos.jira },
+      { name: 'Project Coordination', level: 'Advanced', logo: logos.discord }
     ]
   },
   productivity: {
@@ -71,9 +78,55 @@ const skillsData = {
     color: 'bg-indigo-500/10 text-indigo-600 border-indigo-200',
     skills: [
       { name: 'Git/GitHub', level: 'Intermediate', logo: logos.github },
-      { name: 'VS Code', level: 'Advanced', icon: '💻' },
-      { name: 'Project Management', level: 'Intermediate', icon: '📋' },
-      { name: 'Content Creation', level: 'Advanced', logo: logos.canva }
+      { name: 'GitLab', level: 'Intermediate', logo: logos.gitlab },
+      { name: 'VS Code', level: 'Advanced', logo: logos.microsoft },
+      { name: 'IntelliJ IDEA', level: 'Advanced', logo: logos.intellij },
+      { name: 'Project Management', level: 'Intermediate', logo: logos.trello },
+      { name: 'Content Creation', level: 'Advanced', logo: logos.canva },
+      { name: 'Figma', level: 'Intermediate', logo: logos.figma }
+    ]
+  },
+  cloud: {
+    title: 'Cloud & DevOps',
+    icon: Database,
+    color: 'bg-orange-500/10 text-orange-600 border-orange-200',
+    skills: [
+      { name: 'AWS', level: 'Intermediate', logo: logos.aws },
+      { name: 'Google Cloud', level: 'Intermediate', logo: logos.gcp },
+      { name: 'Azure', level: 'Basic', logo: logos.microsoft },
+      { name: 'Docker', level: 'Intermediate', logo: logos.docker },
+      { name: 'Kubernetes', level: 'Basic', logo: logos.kubernetes },
+      { name: 'Jenkins', level: 'Intermediate', logo: logos.jenkins },
+      { name: 'Vercel', level: 'Advanced', logo: logos.vercel },
+      { name: 'Netlify', level: 'Advanced', logo: logos.netlify },
+      { name: 'Heroku', level: 'Intermediate', logo: logos.heroku }
+    ]
+  },
+  databases: {
+    title: 'Databases',
+    icon: Database,
+    color: 'bg-teal-500/10 text-teal-600 border-teal-200',
+    skills: [
+      { name: 'MongoDB', level: 'Intermediate', logo: logos.mongodb },
+      { name: 'PostgreSQL', level: 'Intermediate', logo: logos.postgresql },
+      { name: 'Redis', level: 'Basic', logo: logos.redis },
+      { name: 'MySQL', level: 'Intermediate', icon: '�️' },
+      { name: 'SQLite', level: 'Intermediate', icon: '📊' }
+    ]
+  },
+  platforms: {
+    title: 'Platforms & Communities',
+    icon: Gamepad2,
+    color: 'bg-pink-500/10 text-pink-600 border-pink-200',
+    skills: [
+      { name: 'LeetCode', level: 'Advanced', logo: logos.leetcode },
+      { name: 'HackerRank', level: 'Advanced', logo: logos.hackerrank },
+      { name: 'Codeforces', level: 'Intermediate', logo: logos.codeforces },
+      { name: 'CodePen', level: 'Intermediate', logo: logos.codepen },
+      { name: 'Stack Overflow', level: 'Advanced', logo: logos.stackoverflow },
+      { name: 'Medium', level: 'Intermediate', logo: logos.medium },
+      { name: 'Dev.to', level: 'Intermediate', logo: logos.devto },
+      { name: 'Hashnode', level: 'Intermediate', logo: logos.hashnode }
     ]
   }
 };

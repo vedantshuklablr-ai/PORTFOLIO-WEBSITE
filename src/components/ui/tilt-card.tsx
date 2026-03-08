@@ -1,49 +1,77 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface TiltCardProps {
   children: React.ReactNode;
   className?: string;
-  intensity?: number;
+  tiltIntensity?: number;
+  scaleIntensity?: number;
+  glareIntensity?: number;
 }
 
-export function TiltCard({ children, className = '', intensity = 15 }: TiltCardProps) {
-  const [transform, setTransform] = useState('');
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-
-    const card = cardRef.current;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = ((y - centerY) / centerY) * -intensity;
-    const rotateY = ((x - centerX) / centerX) * intensity;
-
-    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`);
-  };
-
-  const handleMouseLeave = () => {
-    setTransform('perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
-  };
-
+export function TiltCard({ 
+  children, 
+  className = '', 
+  tiltIntensity = 15,
+  scaleIntensity = 1.05,
+  glareIntensity = 0.4
+}: TiltCardProps) {
   return (
     <motion.div
-      ref={cardRef}
-      className={`transition-transform duration-200 ease-out ${className}`}
-      style={{ transform }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      whileHover={{ z: 50 }}
+      className={`relative preserve-3d transition-all duration-300 ease-out ${className}`}
+      whileHover={{
+        rotateX: -tiltIntensity,
+        rotateY: tiltIntensity,
+        scale: scaleIntensity,
+        transition: {
+          duration: 0.3,
+          ease: "easeOut"
+        }
+      }}
+      whileTap={{
+        scale: 0.98,
+        transition: {
+          duration: 0.1,
+          ease: "easeOut"
+        }
+      }}
+      style={{
+        transformStyle: 'preserve-3d',
+        perspective: '1000px'
+      }}
     >
-      {children}
+      {/* Glare effect */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 pointer-events-none rounded-lg"
+        whileHover={{
+          opacity: glareIntensity,
+          transition: {
+            duration: 0.3,
+            ease: "easeOut"
+          }
+        }}
+        style={{
+          background: 'linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.7) 50%, transparent 60%)'
+        }}
+      />
+      
+      {/* Shadow effect */}
+      <motion.div
+        className="absolute -inset-2 bg-gradient-to-br from-transparent to-black/20 opacity-0 pointer-events-none rounded-lg blur-xl"
+        whileHover={{
+          opacity: 0.3,
+          transition: {
+            duration: 0.3,
+            ease: "easeOut"
+          }
+        }}
+      />
+      
+      {/* Content */}
+      <div className="relative z-10">
+        {children}
+      </div>
     </motion.div>
   );
 }

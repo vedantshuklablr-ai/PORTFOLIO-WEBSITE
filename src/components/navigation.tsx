@@ -5,16 +5,16 @@ import { Menu, X, Download, Mail } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
   { name: 'Experience', href: '#experience' },
   { name: 'Education', href: '#education' },
   { name: 'Certifications', href: '#certifications' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Skills', href: '/skills' },
   { name: 'Languages', href: '#languages' },
   { name: 'YouTube', href: '#youtube' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 export function Navigation() {
@@ -45,8 +45,16 @@ export function Navigation() {
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    
+    // Check if it's a page route or anchor link
+    if (href.startsWith('/')) {
+      // Navigate to page
+      window.location.href = href;
+    } else {
+      // Scroll to anchor
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (

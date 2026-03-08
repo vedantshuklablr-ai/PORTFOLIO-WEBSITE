@@ -43,6 +43,12 @@ const socialLinks = [
     color: 'hover:bg-gray-50 border-gray-200'
   },
   {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/@Java007',
+    logo: logos.youtube,
+    color: 'hover:bg-red-50 border-red-200'
+  },
+  {
     name: 'Microsoft Learn',
     href: 'https://learn.microsoft.com/en-gb/users/vedantshukla-6026/',
     logo: logos.microsoft,

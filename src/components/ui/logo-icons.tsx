@@ -39,6 +39,7 @@ export const logos = {
   microsoft: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg',
   leetcode: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/LeetCode_logo_black.png',
   hackerrank: 'https://upload.wikimedia.org/wikipedia/commons/4/41/HackerRank_logo.png',
+  youtube: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/YouTube_Logo_2017.svg',
   python: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
   tensorflow: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg',
   aws: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Copy, Check } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Copy, Check, Download, MessageSquare } from 'lucide-react';
 import { LogoIcon, logos } from '@/components/ui/logo-icons';
 
 const contactInfo = [
@@ -98,6 +98,37 @@ export function ContactSection() {
           <p className="mt-4 text-muted text-lg max-w-2xl mx-auto">
             Let's connect and discuss opportunities, collaborations, or just have a conversation about technology and innovation
           </p>
+        </motion.div>
+
+        {/* Quick Actions */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.a
+              href="/resume.html"
+              target="_blank"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            >
+              <Download className="w-5 h-5" />
+              Download Resume
+            </motion.a>
+            <motion.a
+              href="mailto:vedant.shukla@example.com"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center justify-center gap-3 px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+            >
+              <Mail className="w-5 h-5" />
+              Send Email
+            </motion.a>
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">

@@ -94,7 +94,7 @@ export function Navigation() {
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <button
-              onClick={() => window.open('#resume', '_blank')}
+              onClick={() => window.open('/resume.html', '_blank')}
               className="p-2 rounded-lg bg-card border border-line hover:bg-accent/10 transition-all duration-300 hover:scale-105"
               aria-label="Download Resume"
               title="Download Resume"
@@ -148,7 +148,7 @@ export function Navigation() {
               ))}
               <div className="flex space-x-2 pt-4 border-t border-line">
                 <button
-                  onClick={() => window.open('#resume', '_blank')}
+                  onClick={() => window.open('/resume.html', '_blank')}
                   className="flex-1 p-2 rounded-lg bg-card border border-line hover:bg-accent/10 transition-colors flex items-center justify-center"
                 >
                   <Download className="w-5 h-5 mr-2" />

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedant Shukla - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .contact-info {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #666;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .company {
+            font-style: italic;
+        }
+        
+        .date {
+            float: right;
+            font-size: 14px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .skill-category {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .skill-list {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .project {
+            margin-bottom: 15px;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .bullet-points {
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        
+        .bullet-points li {
+            margin-bottom: 5px;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="name">Vedant Shukla</div>
+        <div class="contact-info">Lucknow, Uttar Pradesh • +91 XXXXXXXXXX • vedant.shukla@example.com</div>
+        <div class="contact-info">github.com/vedantshuklablr-ai • linkedin.com/in/vedant-shukla-7735a7313</div>
+        <div class="contact-info">youtube.com/@Java007</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <p>20-year-old tech enthusiast from Lucknow, currently based in Bangalore. Passionate about hackathons, ideathons, workshops, and building innovative projects. Skilled in programming, AI/ML, cybersecurity, and business development. Founder of GOAT ESPORTS and YouTube content creator with 1K+ subscribers.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div>
+            <span class="job-title">Dayananda Sagar University, Bangalore</span>
+            <span class="date">2022 - 2026</span>
+            <div>Bachelor of Technology in Computer Science</div>
+        </div>
+        <div style="margin-top: 15px;">
+            <span class="job-title">Kendriya Vidyalaya, Lucknow</span>
+            <span class="date">2018 - 2022</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experience</div>
+        <div>
+            <div>
+                <span class="job-title">Founder & CEO</span>
+                <span class="company">GOAT ESPORTS</span>
+                <span class="date">2023 - Present</span>
+            </div>
+            <ul class="bullet-points">
+                <li>Founded and managed professional esports team</li>
+                <li>Organized tournaments and events</li>
+                <li>Team management and talent scouting</li>
+            </ul>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <div>
+                <span class="job-title">YouTube Content Creator</span>
+                <span class="company">@Java007</span>
+                <span class="date">2022 - Present</span>
+            </div>
+            <ul class="bullet-points">
+                <li>Create programming tutorials and project demos</li>
+                <li>1K+ subscribers, 50+ videos</li>
+                <li>Focus on beginner developer education</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Skills</div>
+        <div class="skills-grid">
+            <div>
+                <div class="skill-category">Programming Languages</div>
+                <div class="skill-list">C, Python, C++, C#, JavaScript, TypeScript, Java, HTML5, CSS3</div>
+            </div>
+            <div>
+                <div class="skill-category">Data Science & AI</div>
+                <div class="skill-list">Machine Learning, Deep Learning, TensorFlow, PyTorch, NumPy</div>
+            </div>
+            <div>
+                <div class="skill-category">Cloud & DevOps</div>
+                <div class="skill-list">AWS, GCP, Docker, Kubernetes, Jenkins, Vercel, Netlify</div>
+            </div>
+            <div>
+                <div class="skill-category">Databases</div>
+                <div class="skill-list">MongoDB, PostgreSQL, Redis, MySQL, SQLite</div>
+            </div>
+            <div>
+                <div class="skill-category">Tools</div>
+                <div class="skill-list">Git, GitHub, VS Code, IntelliJ IDEA, Figma, Canva, Slack, Trello, Jira</div>
+            </div>
+            <div>
+                <div class="skill-category">Cybersecurity</div>
+                <div class="skill-list">Network Security, Security Protocols, Threat Analysis</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Projects</div>
+        <div class="project">
+            <div class="project-title">AI Social Media Analyzer</div>
+            <ul class="bullet-points">
+                <li>Image and caption analysis for harmful content detection</li>
+                <li>Technologies: Python, TensorFlow, MongoDB</li>
+            </ul>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Portfolio Website</div>
+            <ul class="bullet-points">
+                <li>Modern responsive portfolio with 3D animations</li>
+                <li>Technologies: Next.js, TypeScript, Tailwind CSS</li>
+            </ul>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Cybersecurity Dashboard</div>
+            <ul class="bullet-points">
+                <li>Real-time network security monitoring</li>
+                <li>Technologies: Python, Docker, PostgreSQL</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Certifications</div>
+        <ul class="bullet-points">
+            <li>IBM Data Science Professional Certificate</li>
+            <li>Google Cloud Computing Foundations</li>
+            <li>Cisco Networking Essentials</li>
+            <li>Microsoft Azure Fundamentals</li>
+            <li>AWS Cloud Practitioner</li>
+            <li>CompTIA Security+</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Languages</div>
+        <div>English: Fluent • Hindi: Native • German: Basic • Punjabi: Conversational</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Forums & Platforms</div>
+        <div>LeetCode: Advanced • HackerRank: Advanced • Codeforces: 1600+ Rating</div>
+        <div>Stack Overflow: 1K+ Reputation • Medium: 500+ Followers</div>
+    </div>
+</body>
+</html>
